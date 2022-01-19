@@ -182,21 +182,26 @@ app.post('/consulta', urlencodedParser, (req, res) => {
             var libro = []
             libro.push(result)
             var idAutor = libro[0][0].id_autor;
+            var idAutor2 = libro[0][0].id_autor2;
             var query2 = { "_id": mongo.ObjectId(idAutor) }
+            var query3 = { "_id": mongo.ObjectId(idAutor2) }
             var coleccion2 = "Autores"
             dbo.collection(coleccion2).find(query2).toArray(function (err, result2) {
                 if (err) throw err;
                 libro.push(result2);
-                res.send(libro)
-                // db.close();
-
+                dbo.collection(coleccion2).find(query3).toArray(function (err, result3) {
+                    if (err) throw err;
+                    libro.push(result3);
+                    res.send(libro)
+                    // db.close();
+                })
             })
         })
     });
 
 });
 
-app.listen(3000);
+    app.listen(3000);
 // SACAR TODOS LOS LIBROS
 // app.get('/', (req, res) => {
 //     res.sendFile(__dirname + '/index.html');
