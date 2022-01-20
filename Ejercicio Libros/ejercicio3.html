@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Insertar libro en base de datos</h1>
+        <form action="/add" method="POST">
+          <div class="form-group">
+            <label for="bdNameAdd">Nombre base de datos donde quieres insertar</label>
+            <input type="text" class="form-control" id="bd_nameAdd" aria-describedby="emailHelp" placeholder="Introduce base de datos" name="bdNameAdd">
+          </div>
+          <div class="form-group">
+            <label for="collectionNameAdd">Nombre de la colección en la que quieres insertar</label>
+            <input type="text" class="form-control" id="collection_NameAdd" aria-describedby="emailHelp" placeholder="Introduce colección" name="collectionNameAdd">
+          </div>
+          <div class="form-group">
+            <label for="bookNameAdd">Nombre de libro a insertar</label>
+            <input type="text" class="form-control" id="book_nameAdd" aria-describedby="emailHelp" placeholder="Introduce libro a insertar" name="bookNameAdd">
+          </div>
+          <div class="form-group">
+            <label for="bookISBNAdd">ISBN del libro a insertar</label>
+            <input type="text" class="form-control" id="book_ISBNAdd" aria-describedby="emailHelp" placeholder="Introduce ISBN del libro a insertar" name="bookISBNAdd">
+          </div>
+          <div class="form-group">
+            <label for="authorNameAdd">Apellido del autor del libro a insertar</label>
+            <input type="text" class="form-control" id="author_nameAdd" aria-describedby="emailHelp" placeholder="Introduce autor a insertar" name="authorNameAdd">
+          </div>
+          <div class="form-group">
+            <label for="authorIdAdd">ID del autor del libro a insertar</label>
+            <input type="text" class="form-control" id="author_IdAdd" aria-describedby="emailHelp" placeholder= "Combinación de 24 caracteres letras y numeros" name="authorIdAdd">
+          </div>
+          <div class="form-group">
+            <label for="author2NameAdd">Apellido del segundo autor del libro a insertar</label>
+            <input type="text" class="form-control" id="author2_nameAdd" aria-describedby="emailHelp" placeholder="Introduce autor a insertar" name="author2NameAdd">
+          </div>
+          <div class="form-group">
+            <label for="author2IdAdd">ID del autor del libro a insertar</label>
+            <input type="text" class="form-control" id="author2_IdAdd" aria-describedby="emailHelp" placeholder= "Combinación de 24 caracteres letras y numeros" name="author2IdAdd">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+</form>
+</body>
+</html>
